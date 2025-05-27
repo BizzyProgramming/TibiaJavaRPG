@@ -1,5 +1,5 @@
 package bbrown2025;
 
-public class Knight {
+public class Knight extends Character {
 
 }

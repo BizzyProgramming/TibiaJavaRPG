@@ -28,8 +28,8 @@ public class Character {
 		return name;
 	}
 
-	public void setName(String newName) {
-		this.name = newName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getLevel() {
@@ -47,29 +47,36 @@ public class Character {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public boolean isPromoted() {
+	
+	public boolean getIsPromoted() {
 		return isPromoted;
 	}
-
-	public void setPromoted(boolean isPromoted) {
+	
+	public void setIsPromoted(boolean isPromoted) {
 		this.isPromoted = isPromoted;
 	}
-
+	
 	public double getHealth() {
 		return health;
 	}
-
-	public void setHealth(double health) {
+	
+	public void setHeath(double health) {
 		this.health = health;
 	}
-
-	public String getVocation() {
+	
+	public String vocation() {
 		return vocation;
 	}
-
+	
 	public void setVocation(String vocation) {
 		this.vocation = vocation;
 	}
 
+	@Override
+	public String toString() {
+		return "Character Name: " + name + "\nHealth: " + health + "\nVocation: " + vocation + "\nLevel: " + level
+				+ "\nDescription: " + description + "\n" + "Is Promoted: " + isPromoted + "\n";
+	}
+	
+	
 }

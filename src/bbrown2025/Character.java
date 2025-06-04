@@ -1,6 +1,6 @@
 package bbrown2025;
 
-public class Character {
+public abstract class Character {
 
 	// Attributes and behavior in which all characters will have
 	private String name;
@@ -9,6 +9,8 @@ public class Character {
 	private boolean isPromoted;
 	private double health;
 	private String vocation;
+	
+	public abstract String getFinalVocation();
 
 	// Default constructor - creates an empty character
 	public Character() {
@@ -79,8 +81,9 @@ public class Character {
 	// How to format and make the return nice and neat
 	@Override
 	public String toString() {
-		return "Character Name: " + name + "\nHealth: " + health + "\nVocation: " + vocation + "\nLevel: " + level
+		return "Character Name: " + name + "\nHealth: " + health + "\nVocation: " + getFinalVocation() + "\nLevel: " + level
 				+ "\nDescription: " + description + "\n" + "Is Promoted: " + isPromoted + "\n";
 	}
-
+	
+	
 }
